@@ -3,125 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>webpage</title>
-</head>
+  <title>CSS link,list and image</title>
 <style>
-  *{box-sizing: border-box;}
-  #title
+
+a:link,:visited
+{
+  background-color:green;
+ color:white;
+  text-decoration: none;
+ font-size: 20px;
+   display: inline;
+  padding: 20px 40px;
+ margin-top: 40px;
+
   
-  {
-    width: 70%;
-    padding: 8px;
-    background-color:white;
-  }
-  
- #border {
-  width: 65%;
-    border: 3px dotted black;
-    border-left: solid red;
-    border-right: solid red;
-   padding: 3px;
-   margin-left: 5px;
-   
-   
-    
   }
 
-  #corner {
-    width: 200px;
-    border: 2px solid black;
-    height: 150px;
-    border-radius: 15px;
-    padding-top: 20px;
-    padding-left: 20px;
-     margin-top: 60px;
-     margin-left: 5px;
-  }
-  #corner2 {
-    width: 200px;
-    border: 2px solid black;
-    height: 150px;
-    border-radius: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-     margin-top: 10px;
-     
-     background-color: orange;
-     border: none;
-     margin-left: 5px;
-  }
-  #form {
-width: 65%;
-border: 1px solid black;
-padding: 10px;
-margin-top: 70px;
-margin-left: 5px;
-  }
-  #text {
-    color: rgb(27, 142, 27);
-    text-align: center;
-  }
-  #try {
-    margin-left: 70px;
-    letter-spacing: 2px;
-  }
-  #link {
-    color: blue;
-  }
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 65%;
-  }
- #greet {
-  display: inline-block;
- } 
-#back {
-  width:65%;
-  height: 65%;
-  background-image: url(back.png);
-  background-repeat: no-repeat;
- background-size: cover;
- margin-top: 60px;
- margin-left: 5px;
-   }
-#img {
- padding: 10px;
- margin-top: 0;
+a:hover{
+  border: 3px solid green;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+ font-size: 20px;
+  display: inline;
+  padding: 20px 40px;
+  margin-top: 40px;
+ 
+ 
 }
-#yellow {
-  width: 50px;height: 55px;
-  border: 1px solid black;
-  background-color: rgb(243, 182, 27);
-  border: none;
-  position: absolute;
-  right: 527px;
-  margin-top: 0;
+#color {
+  list-style-type: square;
+  background-color: yellow;
+  margin-top: 130px;
+  margin-bottom: 130px;
+  
+  }
+li::marker{
+  color: red;
+}
 
+#s1 {
+  display: inline;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+#s2 {
+display: inline-block;
+width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+#s3 {
+display: block;
+width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+
+}
+img{
+ position: absolute; 
+ z-index: -1;
+ 
 
 }
 </style>
 
-<body>
-  <div id="title">
-    <h1>The border-style Property</h1>
-  </div>
-  <div id="border" >A border</div><br><br>
-  <div id="corner">Rounded corners!</div>
-  <div id="corner2">Rounded corners!</div><br><br>
-  <div id="form"> 
-    <h1 id="text">TEXT FORMATTING</h1>
- <p id="try">This text is styled <a id="link">"Try it"</a>link.</p>
-</div><br><br>
 
-<div id="back"></div></div>
-<div id="yellow"></div>
-<div id="img">
- <h1 id="greet">Hello World!</h1>
-  <p style="font-size: 20px;">This page has an image as the background!</p>
+
+</head>
+<body>
+<a href=>This is a link</a>
+ 
+  
+ <ul id="color">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola </li>
+</ul><br>
+
+<img src="../backimage.avif" alt="color">
+ <h1>This is a heading</h1>
+ <p>Because the image has a z-index of -1,it will be placed behined the text.</p>
+ <br><br>
+
+
+<h1 style="margin-top: 200px;">The display property</h1>
+<h2>display:inline</h2>
+<div>
+<p>this is text this is text this is text <span id="s1">hello</span> <span id="s1">there</span> this is text this is text this is text</p>
 </div>
-  
-  
-  
+
+<h2>display: inline-block</h2>
+<div>
+  <p>this is text this is text this is text <span id="s2">hello</span> <span id="s2">there</span> this is text this is text this is text</p>
+</div>
+<h2>display: block</h2>
+<div><p>this is text this is text this is text <span id="s3">hello</span> <span id="s3">there</span> this is text this is text this is text</p>
+</div>
+
 </body>
 </html>
